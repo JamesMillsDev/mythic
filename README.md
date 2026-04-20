@@ -1,6 +1,6 @@
 # Mythic
 
-Mythic is a C++-powered RPG framework designed to bring rich gameplay systems into your project with ease. It provides core features such as stats, abilities, inventory management, damage handling, and flexible stat modifiers - all built with seamless Blueprint integration in mind, so you can extend and customize systems without friction.
+Mythic is a C++/C# - powered RPG framework designed to bring rich gameplay systems into your project with ease. It provides core features such as stats, abilities, inventory management, damage handling, and flexible stat modifiers - all built with seamless Blueprint / Unity VS integration in mind, so you can extend and customize systems with ease.
 
 
 ## Authors
@@ -16,7 +16,7 @@ Mythic is a C++-powered RPG framework designed to bring rich gameplay systems in
     - Damage Application
 - Inventory
 - Abilities
-- Blueprint Friendly
+- Blueprint / Unity Visual Scripting Friendly
 
 
 ## Contributing
@@ -41,7 +41,10 @@ No. Mythic is self-contained and only depends on standard Unreal Engine modules.
 **Can I use Mythic in a Blueprint-only project?**
 The framework is written in C++ but is designed with Blueprint exposure as a priority. Most systems can be configured and extended without writing any C++.
 
-**What version of Unreal Engine is supported?**
+**Is there a Unity version of Mythic?**
+Yes. Mythic also supports Unity. The Unity version is designed to work with C# and integrates with Unity’s scripting environment, including compatibility with Unity Visual Scripting (node-based workflows).
+
+**What version of Unreal Engine / Unity is supported?**
 Check the releases page for the minimum supported engine version. Older versions are not guaranteed to be compatible.
 
 **Can I mix Integer and Float attribute types in the same project?**
