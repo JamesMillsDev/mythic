@@ -2,6 +2,7 @@
 	"BuildId": "33043543",
 	"Modules": 
 	{
-		"Mythic": "UnrealEditor-Mythic.dll"
+		"Mythic": "UnrealEditor-Mythic.dll",
+		"MythicEditor": "UnrealEditor-MythicEditor.dll"
 	}
 }

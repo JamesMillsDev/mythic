@@ -3730,6 +3730,14 @@
 			"Type": "SymbolFile"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/Mythic/Binaries/Win64/UnrealEditor-MythicEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/Mythic/Binaries/Win64/UnrealEditor-MythicEditor.pdb",
+			"Type": "SymbolFile"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/Mythic/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		}
