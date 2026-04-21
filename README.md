@@ -1,6 +1,6 @@
 # Mythic
 
-Mythic is a C++-powered RPG framework designed to bring rich gameplay systems into your project with ease. It provides core features such as stats, abilities, inventory management, damage handling, and flexible stat modifiers - all built with seamless Blueprint integration in mind, so you can extend and customize systems without friction.
+Mythic is a C++/C# - powered RPG framework designed to bring rich gameplay systems into your project with ease. It provides core features such as stats, abilities, inventory management, damage handling, and flexible stat modifiers - all built with seamless Blueprint / Unity VS integration in mind, so you can extend and customize systems with ease.
 
 
 ## Authors
@@ -16,7 +16,7 @@ Mythic is a C++-powered RPG framework designed to bring rich gameplay systems in
     - Damage Application
 - Inventory
 - Abilities
-- Blueprint Friendly
+- Blueprint / Unity Visual Scripting Friendly
 
 
 ## Contributing
@@ -36,18 +36,27 @@ For significant architectural changes, open a discussion issue before writing co
 ## FAQ
 
 **Does Mythic require any third-party plugins?**
-No. Mythic is self-contained and only depends on standard Unreal Engine modules.
+
+No. Mythic is self-contained and only depends on standard Unreal Engine / Unity modules.
 
 **Can I use Mythic in a Blueprint-only project?**
+
 The framework is written in C++ but is designed with Blueprint exposure as a priority. Most systems can be configured and extended without writing any C++.
 
-**What version of Unreal Engine is supported?**
+**Is there a Unity version of Mythic?**
+
+Yes. Mythic also supports Unity. The Unity version is designed to work with C# and integrates with Unity's scripting environment, including compatibility with Unity Visual Scripting (node-based workflows).
+
+**What version of Unreal Engine / Unity is supported?**
+
 Check the releases page for the minimum supported engine version. Older versions are not guaranteed to be compatible.
 
 **Can I mix Integer and Float attribute types in the same project?**
+
 Yes. The attribute type is configurable per attribute, so you can use whichever precision suits each stat.
 
 **How do I report a bug?**
+
 Open an issue on GitHub with a clear description of the problem, steps to reproduce it, and the engine version you are using.
 
 
