@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "MythicStatComponent.generated.h"
 
+class IMythicSaveInterface;
 class UMythicStatContainer;
 class UMythicStat;
 
@@ -21,6 +22,12 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Mythic|Stats")
 	UMythicStatContainer* GetStatContainer() const;
 
+	UFUNCTION(BlueprintCallable, Category = "Mythic|Save")
+	void Serialize(TScriptInterface<IMythicSaveInterface> SaveObject) const;
+	
+	UFUNCTION(BlueprintCallable, Category = "Mythic|Save")
+	void Deserialize(TScriptInterface<IMythicSaveInterface> SaveObject) const;
+	
 public:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -29,5 +36,9 @@ public:
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Replicated, Category = "Mythic", meta = (AllowPrivateAccess = true))
 	TObjectPtr<UMythicStatContainer> Stats;
+
+	// Tag to identify this component's container in the save object
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mythic|Save", meta = (AllowPrivateAccess = true))
+	FName SaveTag = "Default";
 	
 };

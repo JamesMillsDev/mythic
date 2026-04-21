@@ -2,7 +2,7 @@
 
 #include "Stats/Components/MythicStatComponent.h"
 
-
+#include "Data/MythicSaveInterface.h"
 #include "Stats/Data/MythicStat.h"
 #include "Stats/Data/MythicStatContainer.h"
 
@@ -18,6 +18,30 @@ UMythicStatComponent::UMythicStatComponent(const FObjectInitializer& ObjectIniti
 UMythicStatContainer* UMythicStatComponent::GetStatContainer() const
 {
 	return Stats;
+}
+
+void UMythicStatComponent::Serialize(const TScriptInterface<IMythicSaveInterface> SaveObject) const
+{
+	if (!IsValid(Stats) || !SaveObject)
+	{
+		return;
+	}
+
+	IMythicSaveInterface::Execute_SerializeStatContainer(
+		SaveObject.GetObject(), Stats, SaveTag
+	);
+}
+
+void UMythicStatComponent::Deserialize(const TScriptInterface<IMythicSaveInterface> SaveObject) const
+{
+	if (!IsValid(Stats) || !SaveObject)
+	{
+		return;
+	}
+
+	IMythicSaveInterface::Execute_DeserializeStatContainer(
+		SaveObject.GetObject(), Stats, SaveTag
+	);
 }
 
 // Called when the game starts
