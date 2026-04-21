@@ -23,10 +23,10 @@ public:
 	UMythicStatContainer* GetStatContainer() const;
 
 	UFUNCTION(BlueprintCallable, Category = "Mythic|Save")
-	void Serialize(TScriptInterface<IMythicSaveInterface> SaveObject) const;
+	void SerializeStats(TScriptInterface<IMythicSaveInterface> SaveObject) const;
 	
 	UFUNCTION(BlueprintCallable, Category = "Mythic|Save")
-	void Deserialize(TScriptInterface<IMythicSaveInterface> SaveObject) const;
+	void DeserializeStats(TScriptInterface<IMythicSaveInterface> SaveObject) const;
 	
 public:
 	// Called when the game starts

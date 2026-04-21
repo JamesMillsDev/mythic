@@ -20,7 +20,7 @@ UMythicStatContainer* UMythicStatComponent::GetStatContainer() const
 	return Stats;
 }
 
-void UMythicStatComponent::Serialize(const TScriptInterface<IMythicSaveInterface> SaveObject) const
+void UMythicStatComponent::SerializeStats(const TScriptInterface<IMythicSaveInterface> SaveObject) const
 {
 	if (!IsValid(Stats) || !SaveObject)
 	{
@@ -32,7 +32,7 @@ void UMythicStatComponent::Serialize(const TScriptInterface<IMythicSaveInterface
 	);
 }
 
-void UMythicStatComponent::Deserialize(const TScriptInterface<IMythicSaveInterface> SaveObject) const
+void UMythicStatComponent::DeserializeStats(const TScriptInterface<IMythicSaveInterface> SaveObject) const
 {
 	if (!IsValid(Stats) || !SaveObject)
 	{

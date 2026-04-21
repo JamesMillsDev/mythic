@@ -17,6 +17,8 @@ void UMythicStatContainer::FindStat(EBranchResult& OutBranches, const FName ID, 
 		// There isn't, so return the failure branch and mark the stat as nullptr
 		Stat = nullptr;
 		OutBranches = EBranchResult::Failure;
+
+		UE_LOG(LogBlueprint, Warning, TEXT("No Stat found for ID %s"), *ID.ToString());
 		return;
 	}
 
@@ -53,7 +55,7 @@ void UMythicStatContainer::PostEditChangeProperty(struct FPropertyChangedEvent& 
 		}
 
 		// Construct a FName from the stat's name as a lower string
-		const FName ID = FName(Stat->GetName().ToLower());
+		const FName ID = FName(Stat->Name.ToString().ToLower());
 		if (ID == NAME_None)
 		{
 			// The name is empty, so skip this
