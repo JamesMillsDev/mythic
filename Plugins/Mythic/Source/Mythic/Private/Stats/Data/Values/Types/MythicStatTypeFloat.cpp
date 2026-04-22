@@ -1,6 +1,6 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Stats/Data/Types/MythicStatTypeFloat.h"
+#include "Stats/Data/Values/Types/MythicStatTypeFloat.h"
 
 uint16 UMythicStatTypeFloat::GetValueSize() const
 {

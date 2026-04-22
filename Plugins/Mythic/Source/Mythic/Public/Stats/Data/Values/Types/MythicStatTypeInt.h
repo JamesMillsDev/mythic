@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Stats/Data/MythicStatValueType.h"
+#include "Stats/Data/Values/MythicStatValueType.h"
 #include "MythicStatTypeInt.generated.h"
 
 USTRUCT()

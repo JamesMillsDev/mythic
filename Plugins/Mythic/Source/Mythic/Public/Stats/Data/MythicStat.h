@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "MythicStatValue.h"
+#include "Stats/Data/Values/MythicStatValue.h"
 #include "UObject/Object.h"
 #include "MythicStat.generated.h"
 

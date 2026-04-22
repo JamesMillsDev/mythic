@@ -1,3 +1,3 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Stats/Data/MythicStatValueType.h"
+#include "Stats/Data/Values/MythicStatValueType.h"
