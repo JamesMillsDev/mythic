@@ -117,14 +117,22 @@ void UMythicStat::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
     DOREPLIFETIME(UMythicStat, Value);
 }
 
-#ifdef WITH_EDITOR
+void UMythicStat::PostLoad()
+{
+	Super::PostLoad();
+	if (ValueType)
+	{
+		Value.TypeDescriptor = ValueType;
+		Value.Initialize();
+	}
+}
 
+#if WITH_EDITOR
 void UMythicStat::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 	if (PropertyChangedEvent.GetPropertyName() == GET_MEMBER_NAME_CHECKED(UMythicStat, ValueType))
 	{
-		// Type changed in editor — reinitialize memory for the new type
 		Value.TypeDescriptor = ValueType;
 		Value.Initialize();
 	}
